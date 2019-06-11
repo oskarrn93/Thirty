@@ -2,4 +2,5 @@
     <string name="app_name">Thirty</string>
     <string name="button_start">Start</string>
     <string name="actitvity_game">Game Activity</string>
+    <string name="buttonGameShowResult">Show Result</string>
 </resources>
