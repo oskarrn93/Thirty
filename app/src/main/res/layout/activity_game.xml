@@ -16,13 +16,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageViewGameDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGameRollDie"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGameRollDie"
+        android:contentDescription="TODO" />
+
     <Button
         android:id="@+id/buttonGameShowResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="259dp"
+        android:layout_marginTop="360dp"
         android:text="@string/buttonGameShowResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGameRollDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/buttonGameRollDie"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGameShowResult"
+        app:layout_constraintStart_toStartOf="@+id/buttonGameShowResult" />
 </androidx.constraintlayout.widget.ConstraintLayout>

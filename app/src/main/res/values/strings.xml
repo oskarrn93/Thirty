@@ -4,4 +4,5 @@
     <string name="actitvity_game">Game Activity</string>
     <string name="buttonGameShowResult">Show Result</string>
     <string name="textviewResultName">Result Activity</string>
+    <string name="buttonGameRollDie">Roll Die</string>
 </resources>
