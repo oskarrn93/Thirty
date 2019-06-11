@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private void showThirtyActivity() {
         Log.d(TAG,"showThirtyctivity");
 
-        Intent intent = new Intent(getBaseContext(), ThirtyActivity.class);
+        Intent intent = new Intent(getBaseContext(), GameActivity.class);
         //intent.putExtra("EXTRA_ANSWER_IS_TRUE", answerIsTrue);
         startActivityForResult(intent, 0);
     }

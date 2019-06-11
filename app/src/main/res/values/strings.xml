@@ -3,4 +3,5 @@
     <string name="button_start">Start</string>
     <string name="actitvity_game">Game Activity</string>
     <string name="buttonGameShowResult">Show Result</string>
+    <string name="textviewResultName">Result Activity</string>
 </resources>
