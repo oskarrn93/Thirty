@@ -6,6 +6,7 @@ public class Die {
     private int value;
 
     public enum Side {
+        NONE,
         ONE,
         TWO,
         THREE,
@@ -13,7 +14,7 @@ public class Die {
         FIVE,
         SIX
     }
-
+    public static Side NONE = Side.NONE;
     public static Side ONE = Side.ONE;
     public static Side TWO = Side.TWO;
     public static Side THREE = Side.THREE;
@@ -29,26 +30,29 @@ public class Die {
 
     private void setImage() {
         switch (this.side) {
+            case NONE:
+                this.image = R.drawable.white;
+                break;
             case ONE:
-                this.image = R.drawable.grey1;
+                this.image = R.drawable.white1;
                 break;
             case TWO:
-                this.image = R.drawable.grey2;
+                this.image = R.drawable.white2;
                 break;
             case THREE:
-                this.image = R.drawable.grey3;
+                this.image = R.drawable.white3;
                 break;
             case FOUR:
-                this.image = R.drawable.grey4;
+                this.image = R.drawable.white4;
                 break;
             case FIVE:
-                this.image = R.drawable.grey5;
+                this.image = R.drawable.white5;
                 break;
             case SIX:
-                this.image = R.drawable.grey6;
+                this.image = R.drawable.white6;
                 break;
             default:
-                this.image = 0;
+                this.image = R.drawable.white;
         }
     }
 
@@ -61,6 +65,9 @@ public class Die {
         int value = 0;
 
         switch (side) {
+            case NONE:
+                value = 0;
+                break;
             case ONE:
                 value = 1;
                 break;
@@ -95,8 +102,13 @@ public class Die {
     }
 
     public static Side[] getPossibleValues() {
-        Side[] values = Die.Side.values();
+        Side[] values = {Die.ONE, Die.TWO, Die.THREE, Die.FOUR, Die.FIVE, Die.SIX};
         return values;
+    }
+
+    @Override
+    public String toString() {
+        return "Die value: " + getValue();
     }
 
 }

@@ -24,7 +24,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        mImageViewGameDie = findViewById(R.id.imageViewGameDie);
+        mImageViewGameDie = findViewById(R.id.imageViewGameDie1);
 
         mButtonGameShowResult = findViewById(R.id.buttonGameShowResult);
         mButtonGameShowResult.setOnClickListener(new View.OnClickListener() {
@@ -35,24 +35,21 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
+        final Thirty thirty = new Thirty(this);
 
         final Die.Side[] diceSide = Die.getPossibleValues();
         final Random random = new Random();
 
-        
+
         mButtonGameRollDie = findViewById(R.id.buttonGameRollDie);
         mButtonGameRollDie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            thirty.roll();
             Log.d(TAG, "mButtonGameShowResult click listener");
 
-            Enum diceValue = diceSide[random.nextInt(diceSide.length)];
-            Die die = new Die((Die.Side) diceValue);
-
-            mImageViewGameDie.setImageResource(die.getImage());
-
-            Log.d(TAG, "die image: " + die.getImage());
-            Log.d(TAG, "die value: " + die.getValue());
+            Log.d(TAG, "thirty getDice: " + thirty.getDice());
+            Log.d(TAG, "thirty getDiceRetry: " +thirty.getDiceRetry());
             }
         });
 

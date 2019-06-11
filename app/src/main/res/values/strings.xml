@@ -5,4 +5,11 @@
     <string name="buttonGameShowResult">Show Result</string>
     <string name="textviewResultName">Result Activity</string>
     <string name="buttonGameRollDie">Roll Die</string>
+
+    <string name="die1">Die 1</string>
+    <string name="die2">Die 2</string>
+    <string name="die3">Die 3</string>
+    <string name="die4">Die 4</string>
+    <string name="die5">Die 5</string>
+    <string name="die6">Die 6</string>
 </resources>
