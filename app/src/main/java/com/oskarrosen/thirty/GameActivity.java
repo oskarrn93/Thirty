@@ -22,6 +22,9 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        final Thirty thirty = new Thirty(this);
+
         setContentView(R.layout.activity_game);
 
         mImageViewGameDie = findViewById(R.id.imageViewGameDie1);
@@ -34,12 +37,6 @@ public class GameActivity extends AppCompatActivity {
             showResultActivity();
             }
         });
-
-        final Thirty thirty = new Thirty(this);
-
-        final Die.Side[] diceSide = Die.getPossibleValues();
-        final Random random = new Random();
-
 
         mButtonGameRollDie = findViewById(R.id.buttonGameRollDie);
         mButtonGameRollDie.setOnClickListener(new View.OnClickListener() {
