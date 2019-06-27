@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Thirty {
@@ -22,6 +23,10 @@ public class Thirty {
 
     private Random random;
 
+    private ArrayList<ScoreOptions> scoreOptions;
+
+    private ArrayList<ScoreOptions> usedScoreOptions;
+
 
     public Thirty (GameActivity gameActivity) {
 
@@ -35,6 +40,22 @@ public class Thirty {
         this.counter = 0;
 
         this.random = new Random();
+
+
+        this.scoreOptions = new ArrayList<>(ScoreOptions.ScoreOptionsEnum.values().length);
+
+       for(ScoreOptions.ScoreOptionsEnum soe : ScoreOptions.ScoreOptionsEnum.values())
+       {
+            this.scoreOptions.add(new ScoreOptions(soe));
+       }
+
+        for(ScoreOptions so : this.scoreOptions)
+        {
+            System.out.println(so.toString());
+        }
+
+
+
     }
 
     public void roll() {
@@ -111,6 +132,10 @@ public class Thirty {
     public Die[] getDiceRetry() {
         Log.d(TAG, "getDiceRetry()");
         return this.diceRetry;
+    }
+
+    public ArrayList<ScoreOptions> getScoreOptions() {
+        return this.scoreOptions;
     }
 
     private void reset() {

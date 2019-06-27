@@ -12,4 +12,16 @@
     <string name="die4">Die 4</string>
     <string name="die5">Die 5</string>
     <string name="die6">Die 6</string>
+
+    <string name="scoreLow">Low</string>
+    <string name="score4">4</string>
+    <string name="score5">5</string>
+    <string name="score6">6</string>
+    <string name="score7">7</string>
+    <string name="score8">8</string>
+    <string name="score9">9</string>
+    <string name="score10">10</string>
+    <string name="score11">11</string>
+    <string name="score12">12</string>
+
 </resources>

@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import java.util.Random;
+import android.widget.Spinner;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -18,6 +18,8 @@ public class GameActivity extends AppCompatActivity {
     private Button mButtonGameRollDie;
 
     private ImageView mImageViewGameDie;
+
+    private Spinner mSpinnerScoreOption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,17 @@ public class GameActivity extends AppCompatActivity {
             Log.d(TAG, "thirty getDiceRetry: " +thirty.getDiceRetry());
             }
         });
+
+
+       mSpinnerScoreOption = findViewById(R.id.spinnerScoreOption);
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item); //selected item will look like a spinner set from XML
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        for(ScoreOptions so : thirty.getScoreOptions()) {
+            spinnerArrayAdapter.add(so.toString());
+        }
+
+        mSpinnerScoreOption.setAdapter(spinnerArrayAdapter);
 
     }
 
